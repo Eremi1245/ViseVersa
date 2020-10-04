@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from.import home
+from.import links
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home.home)
+    path('', links.home),
+    path('reverse/', links.reverse, name='reverse')
 ]
